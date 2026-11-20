@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+<title>4 yome boss oma 💛</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(
+    135deg, #fffde7, #fff59d, #ffd54f
+  );
+  font-family: Georgia, serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px 12px;
+}
+
+.card {
+  background: #fffef5;
+  max-width: 650px;
+  width: 100%;
+  padding: 35px 25px;
+  border-radius: 25px;
+  text-align: center;
+  box-shadow: 0 12px 35px #b8860b44;
+  border: 2px solid #ffe082;
+  position: relative;
+  z-index: 2;
+}
+
+.sunflower {
+  font-size: 65px;
+  animation: bounce 2s infinite;
+}
+
+h1 {
+  color: #c58b00;
+  font-size: 32px;
+}
+
+.subtitle {
+  color: #a67c00;
+  font-style: italic;
+}
+
+button {
+  border: none;
+  background: #ffca28;
+  color: #654500;
+  border-radius: 30px;
+  padding: 15px 25px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 15px 0;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #ffb300;
+  transform: scale(1.05);
+}
+
+#letter {
+  display: none;
+  text-align: left;
+  margin-top: 25px;
+  padding: 22px;
+  background: #fff9df;
+  border-radius: 18px;
+  border-left: 5px solid #fbc02d;
+  animation: fadeIn 1.2s ease;
+}
+
+#letter p {
+  color: #655020;
+  font-size: 16px;
+  line-height: 1.9;
+  margin-bottom: 22px;
+}
+
+.signature {
+  text-align: center;
+  font-weight: bold;
+  color: #b8860b !important;
+}
+
+.heart {
+  position: fixed;
+  bottom: -40px;
+  pointer-events: none;
+  z-index: 3;
+  animation: floatUp 5s linear forwards;
+}
+
+@keyframes bounce {
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatUp {
+  to {
+    transform: translateY(-110vh);
+    opacity: 0;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+  <div class="sunflower">🌻</div>
+
+  <h1>Happy Birthday, Yome! 💛</h1>
+
+  <p class="subtitle">
+    My goated birthday message as the boss oma malopit walang katuad.
+  </p>
+
+  <button id="openButton" onclick="openLetter()">
+    Open IT OPEN OPEN 💛💜
+  </button>
+
+  <div id="letter">
+
+    <p>
+      another year of youuu!! and I hope you know
+      how lucky we are to have someone like you in
+      our lives. sana nakikita mo rin sa sarili mo
+      kung gaano ka ka-special, because you deserve
+      to be appreciated more than you know.
+      you are worth everything, yome ko, and I hope
+      you never let the things happening around you
+      make you question that.
+    </p>
+
+    <p>
+      I know life hasn't always been easy for you.
+      alam kong marami kang pinagdaanan na hindi
+      naman lahat alam ng mga tao sa paligid mo.
+      but look at you now!! despite everything,
+      you're still here, still growing, and still
+      working towards the things that you want to
+      achieve. I am SOFER DUPER MEGA ULTRA GALACTIC
+      PROUD OF YOUUU YOME! Hindi naging madali lahat,
+      but you still managed to get through those
+      days. and I hope you give yourself enough
+      credit for that because you deserve to be
+      proud of yourself, too.
+    </p>
+
+    <p>
+      you spend so much time understanding and
+      caring for other people, but I hope you give
+      yourself that same love and understanding,
+      too.I hope this new chapter brings you closer
+      to all the dreams you've been working so hard
+      for. sana makuha mo lahat ng pinagdarasal at
+      pinaghihirapan mo. I hope you meet people who
+      will genuinely appreciate you, people who will
+      make you feel that you never have to question
+      your worth, and people who will love you
+      exactly as you are. walang labis, walang
+      kulang, may pa-sobra pa dahil special ka 😌
+    </p>
+
+    <p>
+      I also want you to know that even though
+      things have changed and our trio didn't work
+      out the way we once hoped it would, it doesn't
+      mean that I stopped caring or appreciating
+      you. things may not be the same anymore,
+      but please know that you still have me.
+      I'll always be rooting for you, celebrating
+      your achievements, and wishing you nothing
+      but the best. kahit gaano pa karami ang
+      magbago, I'll always be happy to see you grow
+      and become the person you've always wanted
+      to be.
+    </p>
+
+    <p class="signature">
+      happiest birthday, babee! 💛
+      u da goat always i lovee youu!!
+    </p>
+
+    <div style="text-align:center;font-size:35px">
+      🌻💛✨🌼💛
+    </div>
+
+  </div>
+</div>
+
+<script>
+function openLetter() {
+  const letter = document.getElementById("letter");
+  const button = document.getElementById("openButton");
+
+  letter.style.display = "block";
+  button.style.display = "none";
+
+  for (let i = 0; i < 35; i++) {
+    setTimeout(createHeart, i * 120);
+  }
+}
+
+function createHeart() {
+  const heart = document.createElement("div");
+  heart.className = "heart";
+  heart.textContent = "💛";
+
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.fontSize =
+    (15 + Math.random() * 25) + "px";
+
+  document.body.appendChild(heart);
+
+  setTimeout(() => heart.remove(), 5000);
+}
+</script>
+
+</body>
+</html>
